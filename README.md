@@ -1,4 +1,4 @@
-# landing
+# Dashboard
 Project from Odin project "Dashboard".
 
 
