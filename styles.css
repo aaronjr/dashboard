@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -132,7 +132,7 @@ input{
 }
 .main{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1.5fr;
     grid-template-rows: 1fr;
     max-height: 100% !important;
     overflow-y: hidden;
@@ -141,8 +141,8 @@ input{
 
 .articles{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(6,200px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(6,150px);
     height: 100% !important;
     overflow-y: auto;
     gap:30px;
@@ -151,18 +151,68 @@ input{
 
 .article-stuck{
     display: grid;
+    
 }
 
-.announcments,
-.trending{
+.stuck-content{
     background-color: white;
+    height: 70%;
     margin: 10px;
     border-radius:.5rem;
     overflow-y: scroll;
     padding: 10px;
     box-shadow: 3px 3px 10px rgb(169, 168, 168);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.art-top{
+    margin-bottom: 20px;
+}
+.art-top > .stuck-content{
+    gap:5px
 }
 
+.a-heading{
+    font-weight: 500;
+    font-size: small;
+}
+.a-text{
+    font-weight: 300;
+    font-size: small;
+}
+.stuck-heading{
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: large;
+}
+.trending-people{
+    height: 40px;
+    width: 40px;
+    justify-self: center;
+    align-self: center;
+}
+.stuck-person{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px;
+}
+.stuck-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5px;
+    gap: 3px;
+}
+
+.overview{
+    font-weight: 300;
+    font-style: italic;
+    font-size: small;
+}
 .card{
     min-height: 100%;
     border-radius: .5rem;
@@ -176,30 +226,34 @@ input{
 }
 
 .card-header{
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
-    align-items: flex-end;
+    align-self: flex-end;
+    margin-left: 5px;
 }
 .card-text{
     display: flex;
-    align-items: center;
     word-wrap: normal;
+    font-weight: 300;
+    margin: 5px 5px;
+    font-size: small;
 }
 
 .card-options{
     display: flex;
     justify-content: flex-end;
     gap:20px;
+    margin-bottom: 5px;
 }
 
 button{
-    width: 90px;
-    height: 40px;
+    width: 70px;
+    height: 30px;
     border-radius: 1rem;
     border: none;
     background-color: var(--dblue);
     color: white;
     margin: 0px 10px 5px 0px;
-    font-size: large;
+    font-size: medium;
 }
 
