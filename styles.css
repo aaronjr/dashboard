@@ -136,12 +136,13 @@ input{
     grid-template-rows: 1fr;
     max-height: 100% !important;
     overflow-y: hidden;
+    padding:20px 10px;
 }
 
 .articles{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(6,200px);
     height: 100% !important;
     overflow-y: auto;
     gap:30px;
@@ -171,19 +172,24 @@ input{
     padding: 5px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: .5fr 3fr .5fr;
 }
 
 .card-header{
     font-weight: 700;
-    position: relative;
-    top: 10%;
-    left: 10%;
+    display: flex;
+    align-items: flex-end;
 }
 .card-text{
-    position: relative;
-    top: 20%;
-    left: 10%;
+    display: flex;
+    align-items: center;
+    word-wrap: normal;
+}
+
+.card-options{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
 }
 
 button{
